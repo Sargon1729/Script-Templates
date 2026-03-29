@@ -6,7 +6,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-DATE=$(date  --rfc-3339='seconds')
+DATE=$(date '+%Y-%m-%d-%H-%M-%S')
 
 write_log() {
     local message="$1"
