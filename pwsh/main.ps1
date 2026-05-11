@@ -1,7 +1,7 @@
 . ./logging.ps1
 . ./config.ps1
 
-Write-log "----SCRIPT STARTED----"
+write_log "----SCRIPT STARTED----"
 
 ################################################################################## section one
 
@@ -13,4 +13,4 @@ Write-log "----SCRIPT STARTED----"
 
 
 
-Write-log "----SCRIPT FINISHED----"
+write_log "----SCRIPT FINISHED----"
