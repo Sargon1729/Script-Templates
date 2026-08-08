@@ -3,7 +3,7 @@
 source ./config.sh
 source ./logging.sh
 
-write_log "----SCRIPT STARTED----"
+log_info "----SCRIPT STARTED----"
 
 ################################################################################## section one
 
@@ -13,6 +13,6 @@ write_log "----SCRIPT STARTED----"
 
 #some code
 
-write_log "----SCRIPT FINISHED---"
+log_info "----SCRIPT FINISHED---"
 
 
