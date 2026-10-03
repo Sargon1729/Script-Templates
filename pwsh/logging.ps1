@@ -1,4 +1,4 @@
-function write_log {
+function log_info {
 
     param(
         [string]$Message
@@ -6,10 +6,10 @@ function write_log {
     $date = get-date -Format "dd/MM/yyyy hh:mm:ss"
     $LOGFILE = 'log.txt'
     "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
-    Write-Host "$date $Message" -ForegroundColor Cyan
+    Write-Host "$date [INFO] $Message" -ForegroundColor Cyan
 }
 
-function write_error {
+function log_error {
 
     param(
         [string]$Message
@@ -17,10 +17,10 @@ function write_error {
     $date = get-date -Format "dd/MM/yyyy hh:mm:ss"
     $LOGFILE = 'log.txt'
     "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
-    Write-Host "$date $Message" -ForegroundColor Red
+    Write-Host "$date [ERROR] $Message" -ForegroundColor Red
 }
 
-function write_success {
+function log_success {
 
     param(
         [string]$Message
@@ -28,10 +28,10 @@ function write_success {
     $date = get-date -Format "dd/MM/yyyy hh:mm:ss"
     $LOGFILE = 'log.txt'
     "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
-    Write-Host "$date $Message" -ForegroundColor Green
+    Write-Host "$date [SUCCESS] $Message" -ForegroundColor Green
 }
 
-function write_note {
+function log_warn {
 
     param(
         [string]$Message
@@ -39,5 +39,5 @@ function write_note {
     $date = get-date -Format "dd/MM/yyyy hh:mm:ss"
     $LOGFILE = 'log.txt'
     "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
-    Write-Host "$date $Message" -ForegroundColor Yellow
+    Write-Host "$date [WARNING] $Message" -ForegroundColor Yellow
 }
