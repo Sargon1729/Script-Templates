@@ -1,0 +1,5 @@
+log.txt
+*.log
+reset.sh
+config.ps1
+todo.md
