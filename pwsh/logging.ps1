@@ -41,3 +41,14 @@ function log_warn {
     "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
     Write-Host "$date [WARNING] $Message" -ForegroundColor Yellow
 }
+
+function log_debug {
+
+    param(
+        [string]$Message
+    )
+    $date = get-date -Format "dd/MM/yyyy hh:mm:ss"
+    $LOGFILE = 'log.txt'
+    "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
+    Write-Host "$date [WARNING] $Message" -ForegroundColor White -BackgroundColor Magenta
+}
