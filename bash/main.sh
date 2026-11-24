@@ -2,6 +2,7 @@
 #Variables
 source ./config.sh
 source ./logging.sh
+source ./ntfy.sh
 
 log_info "----SCRIPT STARTED----"
 
